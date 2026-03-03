@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/Ophidia
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda-pilot-node-tests:
+      branch: main
+      repo: https://github.com/cessda/cessda-pilot-node-tests.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-celadon-jaguar.sh
+        container: qc.acc_crabby-denim-otter
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-charcoal-dugong.sh
+        container: qc.doc_stuffy-goldenrod-bird
+      github.com/cessda/cessda-pilot-node-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-bronze-ray.sh
+        container: qc.doc_paltry-gold-nightingale
+      github.com/cessda/cessda-pilot-node-tests markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-ochre-capybara.sh
+        container: qc.doc_muzzy-aquamarine-gecko
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-russet-bracke.sh
+        container: qc.lic_boozy-cinnamon-lemur
+  QC.Met:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-carmine-argentino.sh
+        container: qc.met_tasty-aquamarine-bombay
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-thistle-crocodile.sh
+        container: qc.sty_muzzy-black-oyster
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-orange-tapir.sh
+        container: qc.ver_flimsy-orange-guppy
+timeout: 5400
