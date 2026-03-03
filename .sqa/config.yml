@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-celadon-jaguar.sh
-        container: qc.acc_crabby-denim-otter
+        - /usr/bin/env sh .sqa/script.cranky-saffron-dogfish.sh
+        container: qc.acc_cozy-wisteria-dingo
   QC.Doc:
     repos:
       github.com/cessda/cessda-pilot-node-tests find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-charcoal-dugong.sh
-        container: qc.doc_stuffy-goldenrod-bird
+        - /usr/bin/env sh .sqa/script.queasy-indigo-dollar.sh
+        container: qc.doc_stealthy-cardinal-lion
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-bronze-ray.sh
-        container: qc.doc_paltry-gold-nightingale
+        - /usr/bin/env sh .sqa/script.scanty-cornflower-anteater.sh
+        container: qc.doc_randy-fuchsia-kiwi
       github.com/cessda/cessda-pilot-node-tests markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-ochre-capybara.sh
-        container: qc.doc_muzzy-aquamarine-gecko
+        - /usr/bin/env sh .sqa/script.greasy-platinum-jaguar.sh
+        container: qc.doc_sleepy-buff-nightingale
   QC.Lic:
     repos:
       github.com/cessda/cessda-pilot-node-tests licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-russet-bracke.sh
-        container: qc.lic_boozy-cinnamon-lemur
+        - /usr/bin/env sh .sqa/script.bluesy-auburn-centipede.sh
+        container: qc.lic_whiny-sepia-angora
   QC.Met:
     repos:
       github.com/cessda/cessda-pilot-node-tests cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-carmine-argentino.sh
-        container: qc.met_tasty-aquamarine-bombay
+        - /usr/bin/env sh .sqa/script.baggy-cinnamon-chicken.sh
+        container: qc.met_wimpy-zucchini-frigatebird
   QC.Sty:
     repos:
       github.com/cessda/cessda-pilot-node-tests jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-thistle-crocodile.sh
-        container: qc.sty_muzzy-black-oyster
+        - /usr/bin/env sh .sqa/script.muggy-fuchsia-bison.sh
+        container: qc.sty_thirsty-peach-okapi
   QC.Ver:
     repos:
       github.com/cessda/cessda-pilot-node-tests get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-orange-tapir.sh
-        container: qc.ver_flimsy-orange-guppy
+        - /usr/bin/env sh .sqa/script.trippy-tan-dachshund.sh
+        container: qc.ver_snippy-flax-wasp
 timeout: 5400
