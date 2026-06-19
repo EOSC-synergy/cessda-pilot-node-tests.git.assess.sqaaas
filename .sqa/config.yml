@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/Ophidia
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda-pilot-node-tests:
       branch: main
@@ -15,44 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-saffron-dogfish.sh
-        container: qc.acc_cozy-wisteria-dingo
+        - /usr/bin/env sh .sqa/script.kiwi_jubilant_crane.sh
+        container: qc.acc_cardamom_tough_spider
   QC.Doc:
     repos:
       github.com/cessda/cessda-pilot-node-tests find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-indigo-dollar.sh
-        container: qc.doc_stealthy-cardinal-lion
+        - /usr/bin/env sh .sqa/script.clementine_eccentric_manta.sh
+        container: qc.doc_mahogany_affectionate_seal
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cornflower-anteater.sh
-        container: qc.doc_randy-fuchsia-kiwi
+        - /usr/bin/env sh .sqa/script.chartreuse_enigmatic_salamander.sh
+        container: qc.doc_brown_patient_donkey
       github.com/cessda/cessda-pilot-node-tests markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-platinum-jaguar.sh
-        container: qc.doc_sleepy-buff-nightingale
+        - /usr/bin/env sh .sqa/script.copper_artistic_wolf.sh
+        container: qc.doc_carmine_zealous_moose
   QC.Lic:
     repos:
       github.com/cessda/cessda-pilot-node-tests licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-auburn-centipede.sh
-        container: qc.lic_whiny-sepia-angora
+        - /usr/bin/env sh .sqa/script.verdant_bright_echidna.sh
+        container: qc.lic_puce_apprehensive_python
   QC.Met:
     repos:
       github.com/cessda/cessda-pilot-node-tests cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-cinnamon-chicken.sh
-        container: qc.met_wimpy-zucchini-frigatebird
+        - /usr/bin/env sh .sqa/script.clementine_daring_hydra.sh
+        container: qc.met_sand_pensive_camel
   QC.Sty:
     repos:
+      github.com/cessda/cessda-pilot-node-tests checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunset_empathetic_narwhal.sh
+        container: qc.sty_banana_quirky_panther
       github.com/cessda/cessda-pilot-node-tests jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-fuchsia-bison.sh
-        container: qc.sty_thirsty-peach-okapi
+        - /usr/bin/env sh .sqa/script.forest_fierce_lobster.sh
+        container: qc.sty_echelon_sarcastic_kingfisher
   QC.Ver:
     repos:
       github.com/cessda/cessda-pilot-node-tests get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-tan-dachshund.sh
-        container: qc.ver_snippy-flax-wasp
+        - /usr/bin/env sh .sqa/script.cardamom_inventive_fox.sh
+        container: qc.ver_raven_mature_spider
 timeout: 5400
